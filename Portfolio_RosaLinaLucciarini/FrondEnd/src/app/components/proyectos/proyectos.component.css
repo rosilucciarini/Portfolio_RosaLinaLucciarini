@@ -1,0 +1,21 @@
+.row{
+    background-color: #c7cdc3;
+    padding: 10px;
+    color: black;
+
+}
+.contenedor{
+    width: auto;
+}
+.presentacion, .imagen{
+    display: inline-block;
+    text-align: justify;
+    
+}
+.proyecto{
+    box-shadow: 10px 10px 30px #467c8e;
+    border-radius: 8px;
+    
+
+}
+

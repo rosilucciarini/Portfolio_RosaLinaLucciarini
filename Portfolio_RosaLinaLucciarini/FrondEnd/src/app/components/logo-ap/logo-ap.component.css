@@ -1,0 +1,45 @@
+
+#logoAP{
+    width: 150px;
+}
+.icono{
+    font-size: 40px;
+    color: whitesmoke;
+  
+    padding-left: 1px;
+    padding-right: 3px;
+   
+   
+}
+li{
+    list-style: none;
+    display: inline;
+    padding: 0.3em;
+    
+}
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social{
+    margin-right: 0.5em;
+}
+.btn{
+    border-width: medium;
+}
+.social{
+    display: flex;
+}
+@media(max-width: 575px){
+    .contenedor{
+        flex-direction: column;
+    }
+    .social{
+        display: flex;
+        align-items: center;
+    }
+
+}
+

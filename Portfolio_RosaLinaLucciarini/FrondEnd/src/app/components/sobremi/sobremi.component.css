@@ -1,0 +1,95 @@
+/**
+.contenedores{
+    width: 100%;
+    height: 30em;
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+
+}
+
+
+
+
+@media (min-width: 576px){
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px grey;
+        top: 60%;
+        margin-left: 1em;
+    }
+}
+**/
+/**
+.inicio{
+    justify-content: center;
+}
+
+#nombre{
+
+    display: flex;
+    justify-content: center;
+    line-height: 2em;
+    font-size: 5em;
+}
+#developer{
+    display: flex;
+    justify-content: center;
+    font-size: 4em
+       
+}
+
+h2{
+    line-height: 2em;
+    margin-left: 3em;
+}
+p{
+    margin-left: 2em; 
+    font-size: 2em; 
+}
+**/
+.row{
+    background-color: #c7cdc3;
+    padding: 10px;
+    color: black;
+
+}
+
+
+#nombre{
+
+    display: flex;
+    justify-content: center;
+    line-height: 1em;
+    font-size: 3em;
+}
+
+#developer{
+    display: flex;
+    justify-content: center;
+    font-size: 2em
+       
+}
+@media (min-width: 576px){
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px grey;
+        top: 60%;
+        margin-left: 1em;
+    }
+}
+@media (max-width: 575px){
+    #fotodeperfil{
+        position: absolute;
+        width: 30%;
+        border-radius: 100%;
+        box-shadow: 3px 3px grey;
+        top: 60%;
+        margin-left: 1em;
+    }
+}
+.acerca{
+    margin-top: 2em;
+}
