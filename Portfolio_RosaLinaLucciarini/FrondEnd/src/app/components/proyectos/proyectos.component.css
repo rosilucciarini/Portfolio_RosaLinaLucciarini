@@ -1,21 +1,42 @@
 .row{
-    background-color: #c7cdc3;
-    padding: 10px;
+    background-color: #607D8B;
+    padding: 40px;
     color: black;
 
 }
-.contenedor{
-    width: auto;
+h2, h3{
+    display: inline;
 }
-.presentacion, .imagen{
-    display: inline-block;
-    text-align: justify;
+.proyectos{
+    margin-bottom: 10px;
+    display: flex;
     
+    line-height: 1em;
+    font-size: 3em;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 10px;
 }
-.proyecto{
-    box-shadow: 10px 10px 30px #467c8e;
-    border-radius: 8px;
+.nombreP{
+    display: flex;
+    
+    line-height: 1em;
+    font-size: 2em;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 10px;
+}
+.descripcionP{
+    font-family: 'Libre Baskerville', serif;
     
 
 }
+
+button{
+    font-size: 10px;
+    float: inline-start;
+    
+    margin: 5px;
+
+}
+
+
 

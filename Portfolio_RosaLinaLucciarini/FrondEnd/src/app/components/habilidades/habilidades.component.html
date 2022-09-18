@@ -1,185 +1,31 @@
-<div class="container">
-    <div class="row">
-        <h2>Hard Skills</h2>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-  [percent]="80"
-  [radius]="70"
-  [imageSrc]="'../assets/html.png'"
-  [showImage]="true"
-  [imageHeight]="50"
-  [imageWidth]="50"
-  [outerStrokeWidth]="10"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'#1a6fb0'"
-  [innerStrokeColor]="'#b3ddf9'"
-  [animation]="true"
-  [animationDuration]="300">
-  </circle-progress>
+<div class="container-fluid">
+  <div class="row">
+    <h2 class="habilidad">Habilidades</h2>
+    <h3 class="hs">Hard skills</h3>
+    <div class="col-sm-12 col-lg-12">
+      <button type="button" class="btn btn-dark" routerLink="/nuevahabilidad" *ngIf="isLogged"><i class="bi bi-plus-circle"></i>
+          Agregar habilidad
+      </button>
+  </div>
+  <div class="col-sm-12 col-lg-12">
+  <div *ngFor="let Habilidad of habilidad">
+        <div class="nombreH">{{Habilidad.nombreH}}
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"  [style.width]="Habilidad.progreso + '%'"aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{Habilidad.progreso}}%</div>
+          </div>
         </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-      [percent]="85"
-      [radius]="70"
-      [imageSrc]="'../assets/css.png'"
-      [showImage]="true"
-      [imageHeight]="50"
-      [imageWidth]="50"
-      [outerStrokeWidth]="10"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#1a6fb0'"
-      [innerStrokeColor]="'#b3ddf9'"
-      [animation]="true"
-      [animationDuration]="300">
-      </circle-progress>
-            </div>
-            <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                <circle-progress
-          [percent]="70"
-          [radius]="70"
-          [imageSrc]="'../assets/javascript.png'"
-          [showImage]="true"
-          [imageHeight]="60"
-          [imageWidth]="60"
-          [outerStrokeWidth]="10"
-          [innerStrokeWidth]="8"
-          [outerStrokeColor]="'#1a6fb0'"
-          [innerStrokeColor]="'#b3ddf9'"
-          [animation]="true"
-          [animationDuration]="300">
-          </circle-progress>
-                </div>
-                <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                    <circle-progress
-              [percent]="70"
-              [radius]="70"
-              [imageSrc]="'../assets/bootstrap.png'"
-              [showImage]="true"
-              [imageHeight]="50"
-              [imageWidth]="50"
-              [outerStrokeWidth]="10"
-              [innerStrokeWidth]="8"
-              [outerStrokeColor]="'#1a6fb0'"
-              [innerStrokeColor]="'#b3ddf9'"
-              [animation]="true"
-              [animationDuration]="300">
-              </circle-progress>
-                    </div>
-                    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                        <circle-progress
-                  [percent]="80"
-                  [radius]="70"
-                  [imageSrc]="'../assets/angular.png'"
-                  [showImage]="true"
-                  [imageHeight]="70"
-                  [imageWidth]="70"
-                  [outerStrokeWidth]="10"
-                  [innerStrokeWidth]="8"
-                  [outerStrokeColor]="'#1a6fb0'"
-                  [innerStrokeColor]="'#b3ddf9'"
-                  [animation]="true"
-                  [animationDuration]="300">
-                  </circle-progress>
-                        </div>
-                        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                            <circle-progress
-                      [percent]="60"
-                      [radius]="70"
-                      [imageSrc]="'../assets/java.png'"
-                      [showImage]="true"
-                      [imageHeight]="60"
-                      [imageWidth]="60"
-                      [outerStrokeWidth]="10"
-                      [innerStrokeWidth]="8"
-                      [outerStrokeColor]="'#1a6fb0'"
-                      [innerStrokeColor]="'#b3ddf9'"
-                      [animation]="true"
-                      [animationDuration]="300">
-                      </circle-progress>
-                            </div>
-                            <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                                <circle-progress
-                          [percent]="85"
-                          [radius]="70"
-                          [imageSrc]="'../assets/mysql.png'"
-                          [showImage]="true"
-                          [imageHeight]="60"
-                          [imageWidth]="60"
-                          [outerStrokeWidth]="10"
-                          [innerStrokeWidth]="8"
-                          [outerStrokeColor]="'#1a6fb0'"
-                          [innerStrokeColor]="'#b3ddf9'"
-                          [animation]="true"
-                          [animationDuration]="300">
-                          </circle-progress>
-                                </div>
-        
-    
-        <h2>Soft Skills</h2>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-  [percent]="100"
-  [radius]="70"
-  [title]="'Colaborativo'"
-  [showUnits]="false"
-  [titleFontSize]="'1em'"
-  [showSubtitle]="false"
-  [outerStrokeWidth]="10"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'#1a6fb0'"
-  [innerStrokeColor]="'#b3ddf9'"
-  [animation]="true"
-  [animationDuration]="300">
-  </circle-progress>
+       
+        <div *ngIf="isLogged" class="inline">
+            <button class="btn btn-light" routerLink="/edithabilidad/{{Habilidad.id}}">
+                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+  </div>
+        <div *ngIf="isLogged" class="inline">
+            <button  class="btn btn-danger" (click)="delete(Habilidad.id)">
+                <i class="bi bi-trash-fill"></i> BORRAR</button>
         </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-      [percent]="100"
-      [radius]="70"
-      [title]="'Comunicativo'"
-      [showUnits]="false"
-  [titleFontSize]="'1em'"
-  [showSubtitle]="false"
-      [outerStrokeWidth]="10"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#1a6fb0'"
-      [innerStrokeColor]="'#b3ddf9'"
-      [animation]="true"
-      [animationDuration]="300">
-      </circle-progress>
-            </div>
-            <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                <circle-progress
-          [percent]="100"
-          [radius]="70"
-          [title]="'Proactivo'"
-          [showUnits]="false"
-  [titleFontSize]="'1em'"
-  [showSubtitle]="false"
-          [outerStrokeWidth]="10"
-          [innerStrokeWidth]="8"
-          [outerStrokeColor]="'#1a6fb0'"
-          [innerStrokeColor]="'#b3ddf9'"
-          [animation]="true"
-          [animationDuration]="300">
-          </circle-progress>
-                </div>
-                <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                    <circle-progress
-              [percent]="100"
-              [radius]="70"
-              [title]="'Autodidacta'"
-              [showUnits]="false"
-  [titleFontSize]="'1em'"
-  [showSubtitle]="false"
-              [outerStrokeWidth]="10"
-              [innerStrokeWidth]="8"
-              [outerStrokeColor]="'#1a6fb0'"
-              [innerStrokeColor]="'#b3ddf9'"
-              [animation]="true"
-              [animationDuration]="300">
-              </circle-progress>
-                    </div>
-                    
-    
+
 </div>
+  </div>
+  </div>
+</div>
+

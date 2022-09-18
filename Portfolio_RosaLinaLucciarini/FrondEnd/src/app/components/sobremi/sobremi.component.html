@@ -1,26 +1,36 @@
-<div class="container"> 
-    <div class="row aling-items-start">
-        <div class="col-sm-4 col-xl-2">
-            <img src="../../../assets/fotoMia.jpg" alt="Foto personal" class="img-fluid" id="fotodeperfil">
-        
-        </div>
-        <div class="col-sm-8 col-xl-10">
-            <h1 id="nombre">Lucciarini Rosa Lina</h1>
-            <h2 id="developer">Developer Full Stack</h2>
-
-        </div>
-        
-        
-        <div>
-        
-            <span class="col-sm-12 col-lg-12">
-            <h2 class="acerca">Acerca de mi</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vero dicta laudantium enim temporibus laborum illum dolore. Iusto optio aliquam dolorem modi quas, ipsum, expedita, deserunt minima veniam consectetur corrupti!</p>
-            </span>
-        </div>
-
-        
-
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-12 col-lg-12">
+        <img src="../../../assets/fotoMia.jpg" class="img-fluid" id="fotodeperfil">
+        <button type="button" class="btn btn-dark" routerLink="/nuevosobremi" *ngIf="isLogged"><i class="bi bi-plus-circle"></i>
+            Agregar informacion personal
+        </button> 
     </div>
+    <div *ngFor="let Sobremi of sobremi" class="col-sm-12 col-lg-12">
+
+    <div>
+        <h2 class="titulo" >
+            {{Sobremi.nombreS}}
+        </h2>
+    </div>
+    
+    <div>
+       
+            <h2 class="sobremi center">Sobre mi</h2>
+            <p class="descripcionS">{{Sobremi.descripcionS}}</p>
+        
+    </div>
+    <div *ngIf="isLogged" class="inline">
+        <button class="btn btn-light" routerLink="/editsobremi/{{Sobremi.id}}">
+            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+    </div>
+    <div *ngIf="isLogged" class="inline">
+        <button  class="btn btn-danger" (click)="delete(Sobremi.id)">
+            <i class="bi bi-trash-fill"></i> BORRAR</button>
+        </div>
+        
+   
+    </div>
+</div> 
 </div>
 

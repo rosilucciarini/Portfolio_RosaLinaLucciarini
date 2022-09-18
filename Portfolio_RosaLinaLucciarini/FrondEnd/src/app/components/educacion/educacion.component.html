@@ -1,17 +1,35 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <h1>Educacion</h1>
-        <div class="col-sm-1 col-xl-1"></div>
-        <div class="col-sm-11 col-xl-11">
-            <ul>
-                <li><h2> Educacion 1</h2> - <h3>(years)</h3></li>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam quia animi amet adipisci quo nobis accusantium nihil mollitia, quas assumenda id provident, rem illum fuga quam consequatur, suscipit optio vero.</p>
-            </ul>
-            <ul>
-                <li><h2> Educacion 2</h2> - <h3>(years)</h3></li>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam quia animi amet adipisci quo nobis accusantium nihil mollitia, quas assumenda id provident, rem illum fuga quam consequatur, suscipit optio vero.</p>
-            </ul>
+    <h2 class="educacion">Educación</h2>
+    <div class="col-sm-12 col-lg-12">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged"><i class="bi bi-plus-circle"></i>
+            Agregar educacion
+        </button>
+    </div>
+
     
-        </div>
+    <div class="col-sm-12 col-lg-12">
+        
+            
+                <div *ngFor="let Educacion of educacion">
+                    <div class="contenedor">
+                    
+                        <h3 class="nombredu"><li>{{Educacion.nombrE}}</li></h3>
+                   
+                    <p class="descripcionedu">{{Educacion.descripcionE}}</p>
+                </div>
+                    <div *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </div>
+                    <div *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </div>
+                   
+                
+                </div>
     </div>
     </div>
+
+</div>

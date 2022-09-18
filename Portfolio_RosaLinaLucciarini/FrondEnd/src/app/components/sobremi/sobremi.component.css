@@ -1,83 +1,50 @@
-/**
-.contenedores{
-    width: 100%;
-    height: 30em;
-    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
 
-}
-
-
-
-
-@media (min-width: 576px){
-    #fotodeperfil{
-        position: absolute;
-        width: 15%;
-        border-radius: 100%;
-        box-shadow: 3px 3px grey;
-        top: 60%;
-        margin-left: 1em;
-    }
-}
-**/
-/**
-.inicio{
-    justify-content: center;
-}
-
-#nombre{
-
-    display: flex;
-    justify-content: center;
-    line-height: 2em;
-    font-size: 5em;
-}
-#developer{
-    display: flex;
-    justify-content: center;
-    font-size: 4em
-       
-}
-
-h2{
-    line-height: 2em;
-    margin-left: 3em;
-}
-p{
-    margin-left: 2em; 
-    font-size: 2em; 
-}
-**/
 .row{
-    background-color: #c7cdc3;
-    padding: 10px;
+    background-color: #607D8B  ;
+    padding: 40px;
     color: black;
+    display: flex;
 
 }
 
 
-#nombre{
-
-    display: flex;
-    justify-content: center;
+.titulo{
+   
     line-height: 1em;
     font-size: 3em;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 40px;
+    
+    
 }
 
-#developer{
+.sobremi{
+    
+    font-size: 3em;
+    font-family: 'Libre Baskerville', serif;
     display: flex;
     justify-content: center;
-    font-size: 2em
-       
+    text-align: center;
+    padding-top: 20px;
+    
+   
 }
+
+.descripcionS{
+    font-family: 'Libre Baskerville', serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;   
+}
+
 @media (min-width: 576px){
     #fotodeperfil{
         position: absolute;
         width: 15%;
         border-radius: 100%;
         box-shadow: 3px 3px grey;
-        top: 60%;
-        margin-left: 1em;
+        left: 1%;
+        top:520px;
     }
 }
 @media (max-width: 575px){
@@ -86,10 +53,23 @@ p{
         width: 30%;
         border-radius: 100%;
         box-shadow: 3px 3px grey;
-        top: 60%;
-        margin-left: 1em;
+        left: 33%;
+        top:580px;
+       
     }
 }
-.acerca{
-    margin-top: 2em;
+button{
+    font-size: 10px;
+   
+
 }
+.inline{
+    float: left;
+    margin: 10px;
+    
+}
+
+
+
+
+

@@ -1,0 +1,25 @@
+.row{
+    background-color: #607D8B;
+    padding: 40px;
+    color: black;
+
+}
+
+
+#nombre{
+    
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 2px;
+    font-size: 4em;
+    font-family: 'Libre Baskerville', serif;
+    
+    
+}
+
+
+  
+        

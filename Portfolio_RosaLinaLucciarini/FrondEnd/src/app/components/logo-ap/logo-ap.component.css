@@ -1,10 +1,11 @@
 
 #logoAP{
     width: 150px;
+    
 }
 .icono{
     font-size: 40px;
-    color: whitesmoke;
+    color: white;
   
     padding-left: 1px;
     padding-right: 3px;
@@ -26,6 +27,7 @@ li{
 .social{
     margin-right: 0.5em;
 }
+
 .btn{
     border-width: medium;
 }
@@ -41,5 +43,8 @@ li{
         align-items: center;
     }
 
+}
+.a{
+    background-color: white;
 }
 

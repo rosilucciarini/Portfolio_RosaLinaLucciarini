@@ -1,9 +1,38 @@
 .row{
-    background-color: #c7cdc3;
-    padding: 10px;
+    background-color: #607D8B;
+    padding: 40px;
     color: black;
 
 }
-h2, h3{
-    display: inline;
+
+.experiencia{
+    margin-bottom: 10px;
+    display: flex;
+    
+    line-height: 1em;
+    font-size: 3em;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 10px;
+}
+.nombrexp{
+    display: flex;
+    
+    line-height: 1em;
+    font-size: 2em;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 10px;
+}
+.descripcionE{
+    font-family: 'Libre Baskerville', serif;
+    
+
+}
+
+
+button{
+    float: inline-start;
+    
+    margin: 5px;
+    font-size: 10px;
+
 }

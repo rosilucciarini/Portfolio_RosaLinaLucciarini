@@ -1,6 +1,56 @@
 .row{
-    background-color: #c7cdc3;
+    background-color: #607D8B;
  
-    padding: 10px;
+    padding: 40px;
+    color: black;
+}
+.inline{
+    display: inline-block;
+    text-align: center;
+}
+.btn{
+    font-size: 10px;
+}
+
+.nombreH{
+    font-family: 'Libre Baskerville', serif;
+
+}
+.habilidad{
+    
+    display: flex;
+    
+    line-height: 1em;
+    font-size: 3em;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 10px;
+    
+}
+.hs{
+    
+    display: flex;
+    
+    line-height: 1em;
+    
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.progress{
+    width: 60%;
+    
+    
+}
+button{
+    
+    float: inline-start;
+    margin: 5px;
+    font-size: 10px;
+    
+        
+}
+.progress-bar{
+    background-color: #00FF33 ;
     color: black;
 }

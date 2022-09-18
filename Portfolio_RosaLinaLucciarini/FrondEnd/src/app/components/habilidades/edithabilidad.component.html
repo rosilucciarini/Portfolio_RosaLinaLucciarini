@@ -1,0 +1,21 @@
+<div class="container" *ngIf="habilidad">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreH">Nombre de la habilidad</label>
+                    <input type="text" class="form-control" id="nombreH" name="nombreH" [(ngModel)]="habilidad.nombreH" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="progreso">Numero de progreso</label>
+                    <input type="text" class="form-control" id="progreso" name="progreso" [(ngModel)]="habilidad.progreso" required>
+                </div>
+                
+                <button class="btn btn-primary">
+                    Editar progreso
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="contenedor">
                 <div class="logo">
@@ -8,7 +8,8 @@
         <div class="social">
             <a href="https://www.linkedin.com/in/rosa-lina-lucciarini-830901231/" target="_BLANK"><li><i class=" icono fa-brands fa-linkedin"></i></li> </a>
         <a href="https://github.com/rosilucciarini" target="_blank"><li><i class="icono fa-brands fa-github"></i></li></a> 
-        <button type="button" class="btn btn-outline-light">Ingresar</button>
+        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+        <button type="button" class="btn btn-light a" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
     </div>
 </div>
 
